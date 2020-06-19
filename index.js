@@ -3,7 +3,7 @@
 function getDogImage() {
     let answer = document.getElementById("numDogs").value;
     for (let i = 0; i < answer; i++) {
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch(`https://dog.ceo/api/breeds/image/random`)
     .then(response => response.json())
     .then(responseJson => displayResults(responseJson))
     .catch(error => alert('Something went wrong. Try again later.'));
